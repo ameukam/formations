@@ -7,7 +7,11 @@
 - Support de multiples backend de stockage :
     - GCE : PD
     - AWS : EBS
+<<<<<<< HEAD
     - glusterFS / NFS
+=======
+    - GlusterFS / NFS
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
     - Ceph
     - iSCSI
 
@@ -15,7 +19,11 @@
 
 - On déclare d'abord le volume et on l'affecte à un service :
 
+<<<<<<< HEAD
 ```
+=======
+```yaml
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 apiVersion: v1
 kind: Pod
 metadata:
@@ -34,8 +42,13 @@ spec:
 
 ### Kubernetes : Storage Class
 
+<<<<<<< HEAD
 - permet de définir les différents types de stockage disponibles
 - utilisé par les `PersistentVolumes` pour solliciter un espace de stockage au travers des `PersistentVolumeClaims`
+=======
+- Permet de définir les différents types de stockage disponibles
+- Utilisé par les `Persistent Volumes` pour solliciter un espace de stockage au travers des `Persistent Volume Claims`
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 
 ### Kubernetes : Storage Class
@@ -52,13 +65,21 @@ parameters:
   iopsPerGB: "10"
 ```
 
+<<<<<<< HEAD
 ### Kubernetes : PervistentVolumeClaims
+=======
+### Kubernetes : PersistentVolumeClaims
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 - Ressource utilisée et vue comme une requête pour solliciter du stockage persistant
 - Offre aux PV une variété d'options en fonction du cas d'utilisation
 - Utilisé par les `StatefulSets` pour solliciter du stockage (Utilisaltion du champ `volumeClaimTemplates`)
 
+<<<<<<< HEAD
 ### Kubernetes : PervistentVolumeClaims
+=======
+### Kubernetes : PersistentVolumeClaims
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 ```yaml
 apiVersion: v1
@@ -72,6 +93,14 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: "slowl"
+<<<<<<< HEAD
+=======
+  selector:
+    matchLabels:
+      release: "stable"
+    matchExpressions:
+      - {key: capacity, operator: In, values: [10Gi, 20Gi]}
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 ```
 
 ### Kubernetes : PersistentVolume

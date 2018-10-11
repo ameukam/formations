@@ -27,16 +27,24 @@
 - Service principal de Kubernetes
 
 - Permet à Kubernetes de s'auto configurer :
+<<<<<<< HEAD
     - Surveille un dossier contenant les *manifests* (fichiers YAML des différents composant de Kubnertes).
+=======
+    - Surveille un dossier contenant les *manifests* (fichiers YAML des différents composants de Kubenertes).
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
     - Applique les modifications si besoin (upgrade, rollback).
 
 - Surveille l'état des services du cluster via l'API server (*kube-apiserver*).
 
-- Dossier de manifest sur un noeud master :
+### Kubernetes : kubelet
 
-```
-ls /etc/kubernetes/manifests/
-kube-apiserver.yaml  kube-controller-manager.yaml  kube-proxy.yaml  kube-scheduler.yaml  policy-controller.yaml
+```console
+root@ubuntu-xenial:~# ls -lh /etc/kubernetes/manifests/
+total 16K
+-rw------- 1 root root 2.0K Sep 23 20:04 etcd.yaml
+-rw------- 1 root root 3.2K Sep 23 20:04 kube-apiserver.yaml
+-rw------- 1 root root 2.5K Sep 23 20:04 kube-controller-manager.yaml
+-rw------- 1 root root 1.1K Sep 23 20:04 kube-scheduler.yaml
 ```
 
 ### Kubernetes : kubelet

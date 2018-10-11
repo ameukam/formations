@@ -26,6 +26,7 @@
     - Surveille un dossier contenant les *manifests* (fichiers YAML des différents composant de Kubernetes).
     - Applique les modifications si besoin (upgrade, rollback).
 - Surveille l'état des services du cluster via l'API server (*kube-apiserver*).
+<<<<<<< HEAD
 - Dossier de manifest sur un noeud master :
 
 ```
@@ -66,6 +67,8 @@ spec:
       path: /usr/share/ca-certificates
     name: ssl-certs-host
 ```
+=======
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 ### Kubernetes : kube-apiserver
 
@@ -91,11 +94,26 @@ spec:
 - Effectue des opérations pour atteindre un état donné
 - De base dans Kubernetes : replication controller, endpoints controller, namespace controller et serviceaccounts controller
 
+<<<<<<< HEAD
+=======
+### Kubernetes : kubelet
+
+```console
+root@ubuntu-xenial:~# ls -lh /etc/kubernetes/manifests/
+total 16K
+-rw------- 1 root root 2.0K Sep 23 20:04 etcd.yaml
+-rw------- 1 root root 3.2K Sep 23 20:04 kube-apiserver.yaml
+-rw------- 1 root root 2.5K Sep 23 20:04 kube-controller-manager.yaml
+-rw------- 1 root root 1.1K Sep 23 20:04 kube-scheduler.yaml
+```
+
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 ### Kubernetes : network-policy-controller
 
 - Implémente l'objet NetworkPolicy
 - Contrôle la communication entre les Pods
 - Externe à Kubernetes et implémenté par la solution de Networking choisie :
+<<<<<<< HEAD
     - [Calico](https://projectcalico.org/)
     - [flannel](https://coreos.com/flannel)
     - [Romana](https://romana.io/)
@@ -105,8 +123,22 @@ spec:
 ### Kubernetes : Aujourd'hui
 
 - Version 1.11 : stable en production
+=======
+    - Calico : <https://projectcalico.org/>
+    - Flannel : <https://coreos.com/flannel>
+    - Romana : <https://romana.io/>
+    - Weave : <https://www.weave.works/oss/net/>
+    - more :  <https://kubernetes.io/docs/concepts/cluster-administration/networking/#how-to-implement-the-kubernetes-networking-model>
+
+### Kubernetes : Aujourd'hui
+
+- Version 1.11.x : stable en production
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 - Solution complète et une des plus utilisées
 - Éprouvée par Google
 - S'intègre parfaitement à d'autres _Container Runtime Interfaces (CRI)_ comme containerd, cri-o, rktlet, fraki, etc...
 
+<<<<<<< HEAD
 ### Kubernetes : Conclusion
+=======
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16

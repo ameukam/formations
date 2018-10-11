@@ -1,11 +1,19 @@
 ### Kubernetes : Création d'objets Kubernetes
 
 - Les objets Kubernetes sont créés sous la forme de fichiers JSON ou YAML et envoyés à l'APIServer
+<<<<<<< HEAD
 - possible d'utiliser la commande `kubectl run`, mais limitée aux `Deployments` et aux `Jobs`
 - L'utilisation de fichiers YAML permet de les stocker dans un système de contrôle de version comme git, mercurial, etc...
 - La documentation de référence pour l'API Kubernetes <https://kubernetes.io/docs/reference/#api-reference>
 
 ### Kubernetes : Création d'objets Kubernetes (1/3)
+=======
+- Possible d'utiliser la commande `kubectl run`, mais limitée aux `Deployments` et aux `Jobs`
+- L'utilisation de fichiers YAML permet de les stocker dans un système de contrôle de version comme git, mercurial, etc...
+- La documentation de référence pour l'API Kubernetes <https://kubernetes.io/docs/reference/#api-reference>
+
+### Kubernetes : Création d'objets Kubernetes
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 - Pour créer un object Kubernetes depuis votre fichier YAML, utilisez la commande `kubectl create` :
 
@@ -13,13 +21,21 @@
 kubectl create -f object.yaml
 ```
 
+<<<<<<< HEAD
 - il est possible de créer des objets Kubernetes à partir d'une URL :
+=======
+- Il est possible de créer des objets Kubernetes à partir d'une URL :
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 ```console
 kubectl create -f https://raw.githubusercontent.com/kubernetes/examples/master/guestbook/frontend-deployment.yaml
 ```
 
+<<<<<<< HEAD
 ### Kubernetes : Création d'objets Kubernetes (2/3)
+=======
+### Kubernetes : Création d'objets Kubernetes
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
 
 - Pour les supprimer exécuter simplement :
 
@@ -33,6 +49,7 @@ kubectl delete -f object.yaml
 kubectl replace -f object.yaml
 ```
 
+<<<<<<< HEAD
 ### Kubernetes : Labels
 
 - Système de clé/valeur
@@ -78,3 +95,5 @@ nginx        1/1              Running     0                    31s          app=
 **TBD**
 
 
+=======
+>>>>>>> 8dad3d5aeb4b7504739cce981b868470d17f1a16
